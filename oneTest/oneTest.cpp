@@ -92,19 +92,33 @@ int main() {
 
 
 
-	string line;
-	while (getline(cin, line)) {
-		if (!line.empty()) {
-			cout << "the line size:" << line.size() << endl;
-			auto str_type = line.size();//.size()类型是string::size_type类型，无符号整型数
-			cout << str_type << endl;
-		}
-		else
-			cout << "error:the line is empty" << endl;
-	}
+	//string line;
+	//while (getline(cin, line)) {
+	//	if (!line.empty()) {
+	//		cout << "the line size:" << line.size() << endl;
+	//		auto str_type = line.size();//.size()类型是string::size_type类型，无符号整型数
+	//		cout << str_type << endl;
+	//	}
+	//	else
+	//		cout << "error:the line is empty" << endl;
+	//}
 
 
-	
+	//string s("Hello World!!!");
+	//decltype(s.size()) punct_cnt = 0;
+	//for (auto c : s)
+	//	if (ispunct(c))
+	//		++punct_cnt;
+	//cout << punct_cnt << " punctuation characters in" << s << endl;
+
+
+	string s2 = "abc";
+	s2[3] = 'd';
+	cout << s2 << endl << s2[3] << endl;
+
+
+
+
 
 	return 0;
 }
