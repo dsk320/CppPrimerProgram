@@ -4,11 +4,13 @@
 #include"Sales_data.h"
 #include<string>
 #include<cctype>
+#include<vector>
 using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
 using std::getline;
+using std::vector;
 int main() {
 	//输入数组之和
 	/*int sum = 0, value = 0;
@@ -112,9 +114,58 @@ int main() {
 	//cout << punct_cnt << " punctuation characters in" << s << endl;
 
 
-	string s2 = "abc";
-	s2[3] = 'd';
-	cout << s2 << endl << s2[3] << endl;
+
+	//首单词变大写
+	//string line;
+	//while (getline(cin, line)) {
+	//	 
+	//	for (string::size_type fnn = 0; fnn<line.size();++fnn) {
+	//		if (islower(line[fnn]) || isupper(line[fnn])) {
+	//			for (decltype(line.size()) index = fnn; index != line.size() && !isspace(line[index]); ++index) {
+	//				line[index] = toupper(line[index]);
+	//			}
+	//			cout << line << endl;
+	//			break;
+	//		}
+	//	}
+	//}
+
+
+
+	//转为16进制，以大于15的数结束循环
+
+	//const string hexdigits = "0123456789ABCDEF";
+	//cout << "Enter a series of numbers between 0 and 15"
+	//	<< " separated by spaces.Hit ENTER when finished:"
+	//	<< endl;
+	//string result;
+	//string::size_type n=0;
+	//while (cin >> n) {
+	//	if (n < hexdigits.size()) {
+	//		result += hexdigits[n];
+	//	}else{
+	//		cout << "Your hex number is: " << result << endl;
+	//		break;
+	//	}
+	//	
+	//}
+
+
+
+    //标准库类型vector
+	/*int i;
+	vector<int> v1;
+	while (cin >> i) {
+		v1.push_back(i);
+
+	}*/
+
+	/*string s;
+	vector<string> v2;
+	while (cin >> s) {
+		v2.push_back(s);
+	}*/
+
 
 
 
