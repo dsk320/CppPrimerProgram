@@ -152,7 +152,7 @@ int main() {
 
 
 
-    //标准库类型vector
+	//标准库类型vector
 	/*int i;
 	vector<int> v1;
 	while (cin >> i) {
@@ -165,6 +165,18 @@ int main() {
 	while (cin >> s) {
 		v2.push_back(s);
 	}*/
+
+
+	//vector<int> v3{ 1,2,3,4,5,6,7,8,9 };
+	//for (auto &i : v3) {
+	//	i *= i;
+	//}
+	//for (auto i : v3) {
+	//	cout << i << " ";
+	//}
+	//cout << endl;
+
+
 
 
 
