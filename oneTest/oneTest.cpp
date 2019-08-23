@@ -211,13 +211,73 @@ int main() {
 
 
 	//迭代器
-	string ss = "some string";
-	if (ss.begin() != ss.end()) {
-		auto it = ss.begin();
-		*it = toupper(*it);
-	}
-	cout << ss << endl;
 
+	//转换成大写
+	//string ss = "some string";
+	//if (ss.begin() != ss.end()) {
+	//	auto it = ss.begin();
+	//	*it = toupper(*it);
+	//}
+	//cout << ss << endl;
+	//for (auto it = ss.begin(); it != ss.end() && !isspace(*it); ++it) {
+	//	*it = toupper(*it);
+	//}
+	//cout << ss << endl;
+
+
+
+	//箭头运算符（->）:it->men等于(*it).men
+	//vector<string> v5;
+	//string s5;
+	//while (cin >> s5) {
+	//	v5.push_back(s5);
+
+	//}
+	//for (auto it = v5.begin(); it != v5.end(); ++it) {
+	//	for (auto &c : *it) {
+	//		c=toupper(c);
+	//	}
+	//		
+	//	cout << *it << " ";
+	//}
+	//cout << endl;
+
+
+	//string迭代器
+	//string s6 = "1asfdasd";
+	//auto it = s6.begin();
+	//it += 3;
+	//cout << *(it += 1) << endl;
+	//cout << (it < s6.end()) << endl;
+
+	//取迭代器中间值
+	//string s7;
+	//cout << "请输入字符串" << endl;
+	//while (cin >> s7)
+		//if (s7.size() % 2 == 1) {
+		//	auto mid = s7.begin() + s7.size() / 2;
+		//	cout << *mid << endl;
+		//}
+		//else if (s7.size() % 2 == 0) {
+		//	auto mid = s7.begin() + s7.size() / 2;
+		//	cout << *(mid-1) << " " << *mid << endl;
+		//}
+
+	
+	//数组
+
+	//char c1[5];//数组维度[]必须是常量表达式
+	//char c2[] = "hello";//字符串字面值初始化字符数组时结尾自动加空字符/n
+	//cout << sizeof(c2) << endl;
+
+	//复杂数组，阅读方式从内到外
+	int* ip = NULL;
+	int* ptrs[10] = { ip };//ptrs是含有10个整型指针的数组,数组存放的是对象，所以不能存在引用数组int& refs[10]={}
+	int arr[10];
+	int(*Parray)[10] = &arr;//Parray指向数组，指向一个存放10个整型的数组
+	int(&arrRef)[10] = arr;//arrRef引用数组，引用一个存放10个整型的数组
+	int* (*prps)[10] =  &ptrs ;//指向一个指针数组，这个指针数组存放10个整型指针
+	int* (&arry)[10] = ptrs;//引用一个指针数组，这个指针数组存放10个整型指针
 
 
 	return 0;
