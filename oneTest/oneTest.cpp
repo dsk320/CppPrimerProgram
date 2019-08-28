@@ -271,13 +271,29 @@ int main() {
 	//cout << sizeof(c2) << endl;
 
 	//复杂数组，阅读方式从内到外
-	int* ip = NULL;
-	int* ptrs[10] = { ip };//ptrs是含有10个整型指针的数组,数组存放的是对象，所以不能存在引用数组int& refs[10]={}
-	int arr[10];
-	int(*Parray)[10] = &arr;//Parray指向数组，指向一个存放10个整型的数组
-	int(&arrRef)[10] = arr;//arrRef引用数组，引用一个存放10个整型的数组
-	int* (*prps)[10] =  &ptrs ;//指向一个指针数组，这个指针数组存放10个整型指针
-	int* (&arry)[10] = ptrs;//引用一个指针数组，这个指针数组存放10个整型指针
+	//int* ip = NULL;
+	//int* ptrs[10] = { ip };//ptrs是含有10个整型指针的数组,数组存放的是对象，所以不能存在引用数组int& refs[10]={}
+	//int arr[10];
+	//int(*Parray)[10] = &arr;//Parray指向数组，指向一个存放10个整型的数组
+	//int(&arrRef)[10] = arr;//arrRef引用数组，引用一个存放10个整型的数组
+	//int* (*prps)[10] =  &ptrs ;//指向一个指针数组，这个指针数组存放10个整型指针
+	//int* (&arry)[10] = ptrs;//引用一个指针数组，这个指针数组存放10个整型指针
+
+
+	//指针和数组,auto得到类型和值；decltype得到类型，未初始化值。
+	int ia[] = { 1,2,3,4 };
+	auto ia2(ia);
+	*ia2 = 11;
+	cout << ia[0] << endl;
+
+	decltype(ia) ia3 = { 3,1,2 };
+	cout << sizeof(ia) << endl;
+
+	int i = 1;
+	decltype((i)) i2 = i;
+	i2 = 2;
+	cout << i << endl;
+
 
 
 	return 0;
